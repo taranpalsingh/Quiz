@@ -2,13 +2,15 @@
 
 // Hapi for RESTfull apis
 const Hapi = require('@hapi/hapi');
+
+// mongoose for quering database
 const mongoose = require('mongoose');
 
 
 // connecting to the mongodb
 mongoose.connect('mongodb+srv://kalpriksh_bist:kaybee7697@quiz-60ug4.mongodb.net/test?retryWrites=true&w=majority', {useNewUrlParser: true});
 
-// importing user schema
+// importing and modelling user schema
 const User = mongoose.model('User', require('./schemas/user.js'));
 
 
